@@ -94,9 +94,21 @@ namespace CSharp_Programming_COP2360_228883_3
         }
         public static void AssignmentA()
         {
+            Clear();
             WriteLine("How large of an isoceles Triangle do you want to print?");
-            WriteLine("Please enter a positive interger (between 1 and 10) : ");
-            ReadKey();
+            Write("Please enter a positive interger (between 1 and 10) : ");
+
+            int userInput;
+
+            if (int.TryParse(ReadLine(), out userInput))
+            {
+
+            }
+            else
+            {
+                WriteLine("\n LOL NOPE");
+                AssignmentA();
+            }
         }
 
         public static void AssignmentMenuA(ConsoleKeyInfo userKeyInfo)
