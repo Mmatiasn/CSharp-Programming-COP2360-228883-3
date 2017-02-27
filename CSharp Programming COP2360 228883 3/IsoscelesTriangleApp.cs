@@ -2,6 +2,18 @@
 using System.Linq;
 using static System.Console;
 
+#pragma warning disable 1587
+///------------------------------------------------------------------------------
+///   Namespace:      <Class CSharp_Programming_COP2360_228883_3>                              
+///   Class:          <Class IsoscelesTriangleApp>                                   
+///   Description:    <Description Assignment 3>                                  
+///   Author:         <Author Matias Miranda Noriega> Date: <DateTime 02/27/2017>   
+///   Notes:          <Notes>                                        
+///   Revision History:                                              
+///   Name:Initial  Date:02/27/2017 Description:Last Modification Date                  
+///------------------------------------------------------------------------------
+#pragma warning restore 1587
+
 namespace CSharp_Programming_COP2360_228883_3
 {
     class IsoscelesTriangleApp
