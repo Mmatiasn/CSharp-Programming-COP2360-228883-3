@@ -1,6 +1,7 @@
 ﻿using System;
 using static System.Console;
 
+#pragma warning disable 1587
 ///------------------------------------------------------------------------------
 ///   Namespace:      <Class CSharp_Programming_COP2360_228883_3>                              
 ///   Class:          <Class Program>                                   
@@ -10,6 +11,7 @@ using static System.Console;
 ///   Revision History:                                              
 ///   Name:Initial  Date:02/27/2017 Description:Last Modification Date                  
 ///------------------------------------------------------------------------------
+#pragma warning restore 1587
 
 namespace CSharp_Programming_COP2360_228883_3
 {
@@ -66,91 +68,26 @@ namespace CSharp_Programming_COP2360_228883_3
             switch (userKeyInfo.Key)
             {
                 case ConsoleKey.A:
-                    IntroA();
+                    var assignmentA = new IsoscelesTriangleApp();
+                    AssignmentMenu();
                     break;
                 case ConsoleKey.B:
-                    //IntroB();
+                    var assignmentB = new ParallelArrayApp();
+                    AssignmentMenu();
                     break;
                 case ConsoleKey.C:
-                    //IntroC();
+                    var assignmentC = new RandomValuesApp();
+                    AssignmentMenu();
                     break;
                 case ConsoleKey.E:
                     ExitApplication();
                     break;
                 default:
-                    WriteLine("\nInvalid selection entered: {0}", userKeyInfo.KeyChar.ToString());
+                    WriteLine("\nInvalid selection entered: {0}", userKeyInfo.KeyChar);
                     AnyKeyContinue();
                     AssignmentMenu();
                     break;
             }
-        }
-        #endregion
-
-        #region Assignment 3-A
-        internal static void IntroA()
-        {
-            Clear();
-            WriteLine("------------------------------------------------------------------");
-            WriteLine("----     You will be prompted to enter a character to be      ----");
-            WriteLine("----     used for printing an isosceles triangle AND an       ----");
-            WriteLine("----     interger between 1 and 10.                           ----");
-            WriteLine("----     The interger will be the length for the two sides    ----");
-            WriteLine("----     of the isosceles triangle. Whatever character is     ----");
-            WriteLine("----     entered will be the character used for printing.     ----");
-            WriteLine();
-            WriteLine("----     You will be able to enter as many sets as you wish.  ----");
-            WriteLine("------------------------------------------------------------------");
-            WriteLine();
-            WriteLine("\t Press any key when you are ready to begin...");
-            ReadKey();
-            AssignmentA();
-        }
-        internal static void AssignmentA()
-        {
-            Clear();
-            WriteLine("How large of an isoceles Triangle do you want to print?");
-            Write("Please enter a positive interger (between 1 and 10) : ");
-
-            int userInput;
-
-            if (int.TryParse(ReadLine(), out userInput))
-            {
-
-            }
-            else
-            {
-                WriteLine("\n LOL NOPE");
-                AssignmentA();
-            }
-        }
-
-        internal static void AssignmentMenuA(ConsoleKeyInfo userKeyInfo)
-        {
-
-        }
-        #endregion
-
-        #region Assignment Menu 3-B
-        internal static void AssignmentMenuB()
-        {
-
-        }
-
-        internal static void AssignmentMenuB(ConsoleKeyInfo userKeyInfo)
-        {
-
-        }
-        #endregion
-
-        #region Assignment Menu 3-C
-        internal static void AssignmentMenuC()
-        {
-
-        }
-
-        internal static void AssignmentMenuC(ConsoleKeyInfo userKeyInfo)
-        {
-
         }
         #endregion
 
@@ -164,7 +101,7 @@ namespace CSharp_Programming_COP2360_228883_3
 
         internal static void AnyKeyContinue()
         {
-            WriteLine("\nPress any key to continue...");
+            WriteLine("Press any key to continue...");
             ReadKey();
         }
         #endregion
